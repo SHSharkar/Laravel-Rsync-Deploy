@@ -8,6 +8,9 @@ inputs:
   REMOTE_HOST:
     description: 'Remote Host or IP'
     required: true
+  REMOTE_HOST_PORT:
+    description: 'Remote Host Port'
+    required: true
   REMOTE_USER:
     description: 'Remote User'
     required: true
