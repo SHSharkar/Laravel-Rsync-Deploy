@@ -3,6 +3,8 @@ FROM debian:stable-slim
 RUN apt update
 RUN apt -yq install rsync openssh-client
 
+FROM node:lts-slim
+
 # Labels
 LABEL "com.github.actions.name"="Laravel Rsync Deploy"
 LABEL "com.github.actions.description"="Deploy Laravel developed project with Rsync"
