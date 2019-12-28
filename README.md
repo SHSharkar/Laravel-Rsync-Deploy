@@ -14,7 +14,7 @@ Example usage to `/.github/workflows/*.yml` file
 
   env:
     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-    ARGS: "--ignore-times --compress --verbose --exclude=.git --filter=':- .gitignore' --no-perms --no-owner --no-group --recursive"
+    ARGS: "--delete --ignore-times --compress --verbose --exclude=.git --filter=':- .gitignore' --no-perms --no-owner --no-group --recursive"
     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
     REMOTE_HOST_PORT: ${{ secrets.REMOTE_HOST_PORT }}
     REMOTE_USER: ${{ secrets.REMOTE_USER }}
