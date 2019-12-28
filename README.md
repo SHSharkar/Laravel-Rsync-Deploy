@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Laravel Rsync Deploy
-        uses: SHSharkar/Laravel-Rsync-Deploy@v1.6
+        uses: SHSharkar/Laravel-Rsync-Deploy@v1.7
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "--ignore-times --compress --verbose --exclude=.git --filter=':- .gitignore' --no-perms --no-owner --no-group --recursive"
