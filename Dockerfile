@@ -7,8 +7,8 @@ RUN apt -yq install rsync openssh-client
 # Label
 LABEL "com.github.actions.name"="Laravel Rsync Deploy"
 LABEL "com.github.actions.description"="Deploy Laravel developed project with Rsync"
-LABEL "com.github.actions.color"="green"
-LABEL "com.github.actions.icon"="truck"
+LABEL "com.github.actions.color"="blue"
+LABEL "com.github.actions.icon"="upload"
 
 LABEL "repository"="https://github.com/SHSharkar/Laravel-Rsync-Deploy"
 LABEL "homepage"="https://github.com/SHSharkar/Laravel-Rsync-Deploy"
