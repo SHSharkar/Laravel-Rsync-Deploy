@@ -7,12 +7,11 @@
 Example usage to `/.github/workflows/*.yml` file
 
 ```
-- name: Deploy with Laravel Rsync Deploy
+- name: Laravel Rsync Deploy
   uses: SHSharkar/Laravel-Rsync-Deploy@master
-
   env:
     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-    ARGS: "--ignore-times --compress --verbose --exclude=.git --filter=':- .gitignore' --no-perms --no-owner --no-group --recursive"
+    ARGS: "--ignore-times --compress --verbose --exclude=.git --exclude=.github --exclude=node_modules --no-perms --no-owner --no-group --recursive"
     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
     REMOTE_HOST_PORT: ${{ secrets.REMOTE_HOST_PORT }}
     REMOTE_USER: ${{ secrets.REMOTE_USER }}
@@ -36,17 +35,14 @@ jobs:
       - uses: actions/checkout@v2
 
       - uses: MilesChou/composer-action/7.3/install@master
-      - uses: MilesChou/composer-action@master
-        with:
-          args: update
+      - run: |
+          cp .env.example .env
+          php artisan key:generate --ansi
 
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          run: yarn install && yarn upgrade
-
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          run: yarn run production
+      - name: Pull Docker image
+        run: |
+          docker pull "node:lts-slim"
+          npm install && npm run production
 
       - name: Laravel Rsync Deploy
         uses: SHSharkar/Laravel-Rsync-Deploy@master
