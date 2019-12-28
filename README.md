@@ -5,7 +5,7 @@ Deploy Laravel developed project with Rsync.
 example usage:
 ```
 - name: Deploy with Laravel Rsync Deploy
-  uses: SHSharkar/Laravel-Rsync-Deploy@v1.0
+  uses: SHSharkar/Laravel-Rsync-Deploy@v1.1
 
   env:
     DEPLOY_KEY: ${{ secrets.SERVER_SSH_KEY }}
