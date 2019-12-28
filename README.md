@@ -34,7 +34,7 @@ on:
       - master
 
 jobs:
-  laravel-tests:
+  laravel-rsync-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
