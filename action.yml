@@ -1,6 +1,28 @@
 name: "Laravel Rsync Deploy"
 author: "Md. Sazzad Hossain Sharkar"
 description: "Deploy Laravel developed project with Rsync"
+inputs:
+  SERVER_SSH_KEY:  # Server SSH Private Key
+    description: 'Server SSH Private Key'
+    required: true
+  SERVER_IP:
+    description: 'Remote Host or IP'
+    required: true
+  USERNAME:
+    description: 'Remote User'
+    required: true
+  SOURCE:
+    description: 'Source directory'
+    default: ''
+  TARGET:
+    description: 'Target directory'
+    default: '~/httpdocs'
+outputs:
+  status:
+    description: 'Status'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
 branding:
   icon: 'upload'  
   color: 'blue'
