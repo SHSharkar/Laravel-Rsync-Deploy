@@ -1,5 +1,6 @@
 name: "Laravel Rsync Deploy"
 author: "Md. Sazzad Hossain Sharkar"
 description: "Deploy Laravel developed project with Rsync"
-icon: "upload"
-color: "blue"
+branding:
+  icon: 'upload'  
+  color: 'blue'
