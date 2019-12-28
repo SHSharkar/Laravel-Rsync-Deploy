@@ -1,0 +1,3 @@
+name: "Laravel Rsync Deploy"
+author: "Md. Sazzad Hossain Sharkar"
+description: "Deploy Laravel developed project with Rsync"
