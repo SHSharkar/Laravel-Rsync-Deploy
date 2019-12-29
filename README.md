@@ -2,6 +2,22 @@
 
 #### Deploy Laravel developed project with Rsync.
 
+### Environment Variables
+
+`SSH_PRIVATE_KEY` = Remote hosts SSH private key
+
+`REMOTE_HOST` = Remote hosts IP address or domain
+
+`REMOTE_HOST_PORT` = SSH remote host port number. e.g.: 22
+
+`REMOTE_USER` = SSH login username. e.g.: root
+
+`TARGET_DIRECTORY` = The target directory or path where the data will be synced. e.g.: ~/httpdocs
+
+**Environment Variables Location**
+
+[https://github.com/REPOSITORY_OWNER/REPOSITORY_NAME/settings/secrets](https://github.com/REPOSITORY_OWNER/REPOSITORY_NAME/settings/secrets)
+
 ### Usage
 
 Example usage to `/.github/workflows/*.yml` file
