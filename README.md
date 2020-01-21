@@ -1,3 +1,5 @@
+[![](https://codescene.io/projects/6753/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/6753/jobs/latest-successful/results)
+
 # Laravel Rsync Deploy
 
 #### Deploy Laravel developed project with Rsync.
